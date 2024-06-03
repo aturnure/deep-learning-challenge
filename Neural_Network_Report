@@ -1,0 +1,21 @@
+# Neural Network Model Report
+
+## Overview
+The purpose of this analysis is to help a nonprofit foundation select applicants that are most likely to succeed in their ventures. In order to make informed decisions, the nonprofit would like a machine learning model to be created that can predict the successfulness of the applicants.
+
+## Results
+Data Preprocessing:
+  - Target variables: IS_SUCCESSFUL
+  - Feature variables: APPLICATION_TYPE, CLASSIFICATION, USE_CASE, ORGANIZATION, STATUS, INCOME_AMT, SPECIAL_CONSIDERATIONS, ASK_AMT
+  - Variables removed: EIN, NAME
+
+Compiling, Training, and Evaluating the Model:
+  - Neurons in the model: 8 per layer
+  - Layers: 2-3 hidden layers 
+  - Activation functions: Relu for the hidden layers, Sigmoid for the output layer
+  - Reasoning: 8 neurons per layer gives a reasonable balance between model complexity and also computational efficiency. The multiple layers also creates an ability to discover non-linear relationships.This balance between complexity and efficiency also helps avoid overfitting.
+  - After 3 different attempts, I was not able to get above a 75% accuracy which was the goal. The accuracy was always around 72-73%.
+  - In order to try and increase the models performance I tried dropping unnecessary columns and also attempted to create different bins for the application type and classification columns. 
+
+## Summary
+Overall, the model had an accuracy of around 72-73%. I would say that maybe in order to create a more accurate model. More specific bins could be created for the application type and classification columns. Additionally, it may be important to layer on the different changes. Maybe have the dropped columns and the new bins all in one attempt. Also maybe adding one more layer could help.
